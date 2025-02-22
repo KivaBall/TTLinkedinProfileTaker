@@ -1,0 +1,6 @@
+﻿services:
+  ttlinkedinprofiletaker:
+    image: ttlinkedinprofiletaker
+    build:
+      context: .
+      dockerfile: TTLinkedinProfileTaker/Dockerfile
