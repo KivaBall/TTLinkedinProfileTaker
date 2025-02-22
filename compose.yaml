@@ -1,6 +1,17 @@
-﻿services:
+﻿version: '3.8'
+services:
   ttlinkedinprofiletaker:
-    image: ttlinkedinprofiletaker
     build:
       context: .
       dockerfile: TTLinkedinProfileTaker/Dockerfile
+    ports:
+      - "8080:8080"
+    image: ttlinkedinprofiletaker
+    container_name: tt-linkedin-profile-taker
+    depends_on:
+      - selenium
+  selenium:
+    image: selenium/standalone-chrome
+    container_name: selenium
+    ports:
+      - "4444:4444"
