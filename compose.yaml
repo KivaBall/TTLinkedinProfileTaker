@@ -3,7 +3,7 @@ services:
   ttlinkedinprofiletaker:
     build:
       context: .
-      dockerfile: TTLinkedinProfileTaker/Dockerfile
+      dockerfile: src/TTLinkedinProfileTaker/Dockerfile
     ports:
       - "8080:8080"
     image: ttlinkedinprofiletaker
